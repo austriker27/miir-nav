@@ -1,0 +1,200 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: logo
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: Logo
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: middle_nav
+        field:
+          collapse: false
+          previews: true
+          max_sets: 4
+          sets:
+            middle_nav_dropdown:
+              display: 'Middle Nav Dropdown'
+              fields:
+                -
+                  handle: dropdown_parent_title
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Dropdown Parent Title'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: dropdown_children
+                  field:
+                    collapse: false
+                    previews: true
+                    sets:
+                      dropdown_child:
+                        display: 'Dropdown Child'
+                        fields:
+                          -
+                            handle: title
+                            field:
+                              input_type: text
+                              antlers: false
+                              display: Title
+                              type: text
+                              icon: text
+                              listable: hidden
+                              instructions_position: above
+                              visibility: visible
+                              always_save: false
+                          -
+                            handle: url
+                            field:
+                              display: Url
+                              type: link
+                              icon: link
+                              listable: hidden
+                              instructions_position: above
+                              visibility: visible
+                              always_save: false
+                          -
+                            handle: image
+                            field:
+                              mode: list
+                              container: assets
+                              restrict: false
+                              allow_uploads: true
+                              show_filename: true
+                              max_files: 1
+                              display: Image
+                              type: assets
+                              icon: assets
+                              listable: hidden
+                              instructions_position: above
+                              visibility: visible
+                              always_save: false
+                      featured_product:
+                        display: 'Featured Product'
+                        fields:
+                          -
+                            handle: image
+                            field:
+                              mode: grid
+                              container: assets
+                              restrict: false
+                              allow_uploads: true
+                              show_filename: true
+                              display: Image
+                              type: assets
+                              icon: assets
+                              listable: hidden
+                              instructions_position: above
+                              visibility: visible
+                              always_save: false
+                              max_files: 1
+                          -
+                            handle: title
+                            field:
+                              input_type: text
+                              antlers: false
+                              display: Title
+                              type: text
+                              icon: text
+                              listable: hidden
+                              instructions_position: above
+                              visibility: visible
+                              always_save: false
+                          -
+                            handle: subtext
+                            field:
+                              restrict: false
+                              automatic_line_breaks: true
+                              automatic_links: false
+                              escape_markup: false
+                              smartypants: false
+                              antlers: false
+                              display: Subtext
+                              type: markdown
+                              icon: markdown
+                              listable: hidden
+                              instructions_position: above
+                              visibility: visible
+                              always_save: false
+                      link:
+                        display: Link
+                        fields:
+                          -
+                            handle: title
+                            field:
+                              input_type: text
+                              antlers: false
+                              display: Title
+                              type: text
+                              icon: text
+                              listable: hidden
+                              instructions_position: above
+                              visibility: visible
+                              always_save: false
+                          -
+                            handle: url
+                            field:
+                              display: Url
+                              type: link
+                              icon: link
+                              listable: hidden
+                              instructions_position: above
+                              visibility: visible
+                              always_save: false
+                    display: 'Dropdown Children'
+                    type: replicator
+                    icon: replicator
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+            middle_nav_link:
+              display: 'Middle Nav Link'
+              fields:
+                -
+                  handle: title
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Title
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: url
+                  field:
+                    display: Url
+                    type: link
+                    icon: link
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+          display: 'Middle Nav'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false

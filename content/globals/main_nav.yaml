@@ -1,0 +1,100 @@
+title: 'Main Nav'
+data:
+  logo: miir-logo.webp
+  middle_nav:
+    -
+      dropdown_parent_title: 'Shop All'
+      dropdown_children:
+        -
+          title: Hydration
+          url: 'https://www.miir.com/collections/hydration'
+          image: miir-hydration.webp
+          type: dropdown_child
+          enabled: true
+        -
+          title: 'Coffee & Tea'
+          url: 'https://www.miir.com/collections/coffee-tea'
+          image: miir-coffee.webp
+          type: dropdown_child
+          enabled: true
+        -
+          title: 'Bar & Food'
+          url: 'https://www.miir.com/collections/bar'
+          image: miir-bar-food.webp
+          type: dropdown_child
+          enabled: true
+        -
+          title: Accessories
+          url: 'https://www.miir.com/collections/accessories'
+          image: miir-accessories-banner.webp
+          type: dropdown_child
+          enabled: true
+        -
+          title: Pets
+          url: 'https://www.miir.com/products/dog-bowl-stainless-steel'
+          image: dog_bowl_lifestyle_0621_26.webp
+          type: dropdown_child
+          enabled: true
+        -
+          title: '32oz Wide Mouth'
+          subtext: 'Our Wide Mouth collection covers every level of thirst and is perfect for that on-the-go lifestyle. Thoughtful design features make it easy to stash ice, carry and clean. Featuring our Thermo 3D® double wall vacuum insulation, the Wide Mouth Bottle keeps any beverage hot or cold for hours on end.'
+          type: featured_product
+          enabled: true
+          image: miir-32oz-wm-white.webp
+      type: middle_nav_dropdown
+      enabled: true
+    -
+      dropdown_parent_title: 'Best Sellers'
+      type: middle_nav_dropdown
+      enabled: true
+      dropdown_children:
+        -
+          image: miir-32oz-wm-white.webp
+          title: '32oz Wide Mouth'
+          type: featured_product
+          enabled: true
+        -
+          image: 360_traveler_16oz_lto_curtis_bullock_studio_0322_180.webp
+          title: '360 Traveler - Curtis Bullock'
+          type: featured_product
+          enabled: true
+        -
+          image: wide_mouth_32oz_burkard_studio_1121_front.webp
+          title: 'Chris Burkard 32oz WM Bottle'
+          type: featured_product
+          enabled: true
+        -
+          image: kids_bottle_12oz_black_studio_0421_front_open_1.webp
+          title: '12oz Kids Bottle'
+          type: featured_product
+          enabled: true
+        -
+          image: camp_cup_12oz_speckled_green_studio_1120_front_e4860473-3d58-4504-abb9-d2c460697056.webp
+          title: 'Camp Cup - 12oz'
+          type: featured_product
+          enabled: true
+        -
+          image: kids_bottle_12oz_cascara_studio_0421_front_open.webp
+          title: '12oz Kids Bottle Wide Mouth'
+          type: featured_product
+          enabled: true
+    -
+      dropdown_parent_title: 'About MiiR'
+      type: middle_nav_dropdown
+      enabled: true
+      dropdown_children:
+        -
+          title: 'About Us'
+          url: 'https://www.miir.com/pages/about'
+          type: link
+          enabled: true
+        -
+          title: 'Founder''s Story'
+          url: 'https://www.miir.com/pages/miir-founders-story'
+          type: link
+          enabled: true
+        -
+          title: 'Give Code'
+          url: 'https://www.miir.com/pages/givecode'
+          type: link
+          enabled: true
