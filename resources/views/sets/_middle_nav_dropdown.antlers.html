@@ -1,0 +1,52 @@
+<li class="inline-flex px-3 py-3">
+    <button
+        class="inline-flex gap-2 items-center"
+        @click.prevent="navDropdownIsOpen = (navDropdownIsOpen === '{{ dropdown_parent_title }}' ? false : '{{ dropdown_parent_title }}')"
+    >
+        <span class="font-semibold">
+            {{ dropdown_parent_title }}
+        </span>
+        <template x-if="navDropdownIsOpen == '{{ dropdown_parent_title}}'">
+            {{ svg src="phosphoricons/caret-down" class="h-4 fill-current text-black" }}
+        </template>
+        <template x-if="navDropdownIsOpen !== '{{ dropdown_parent_title}}'">
+            {{ svg src="phosphoricons/caret-up" class="h-4 fill-current text-black" }}
+        </template>
+    </button>
+
+    {{# DROPDOWN #}}
+    <div class="absolute bottom-0 left-0 translate-y-full shadow-md px-8 py-4 w-screen"
+        x-show="navDropdownIsOpen == '{{ dropdown_parent_title }}'"
+        x-cloak
+        x-collapse>
+        <div class="justify-center flex flex-wrap gap-2">
+            {{ dropdown_children }}
+            {{ if type == 'dropdown_child' or type == 'link'}}
+            <ul class="flex flex-col w-1/2">
+                {{ if type == "dropdown_child" }}
+                    <li class="inline-flex w-full">
+                        {{ partial src="sets/dropdown_child" }}
+                    </li>
+                {{ elseif type == 'link' }}
+                    <li>
+                        <a href="{{ url }}" target="_blank" rel="noopener noreferrer">
+                            {{ title }}
+                        </a>
+                    </li>
+                {{ /if }}
+            </ul>
+            {{ /if }}
+            {{ /dropdown_children }}
+
+            {{ dropdown_children }}
+            {{ if type == "featured_product" }}
+                <ul class="w-1/2">
+                    <li>
+                        {{ partial:product_card }}
+                    </li>
+                </ul>
+            {{ /if }}
+            {{ /dropdown_children }}
+        </div>
+    </div>
+</li>

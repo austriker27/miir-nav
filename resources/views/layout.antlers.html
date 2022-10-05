@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <title>{{ title ?? site:name }}</title>
+    <link rel="stylesheet"
+          href="{{ mix src='css/tailwind.css' }}">
+</head>
+<body class="">
+    <header class="">
+        <div class="bg-black">
+            <div class="flex items-center justify-end py-2.5 max-w-screen-xl px-4">
+                <ul class="w-2/3 justify-between flex items-center">
+                    {{ nav:top_nav }}
+                        <li>
+                            <a class="text-gray-200 font-sans text-xs tracking-wide"
+                               href="{{ url }}">
+                                {{ title }}
+                            </a>
+                        </li>
+                    {{ /nav:top_nav }}
+                </ul>
+            </div>
+        </div>
+        <nav class="flex justify-between items-center py-2 px-3 relative"
+             x-data="{ navDropdownIsOpen: false }">
+            <a class=""
+               href="/"
+               aria-label="Home">
+                <img class="h-10"
+                     src="{{ main_nav:logo }}"
+                     alt="">
+            </a>
+            <!-- MIDDLE NAV ITEMS -->
+            <ul class="flex gap-1">
+                {{ main_nav:middle_nav }}
+                    {{ partial src="sets/{type}" }}
+                {{ /main_nav:middle_nav }}
+            </ul>
+            <!-- AUX NAV -->
+            <!-- SEARCH, USER, SHOPPING CART, QUESTION -->
+            <ul>
+                <li>
+
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <script src="{{ mix src='/js/site.js' }}"></script>
+</body>
+</html>

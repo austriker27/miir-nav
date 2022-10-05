@@ -1,0 +1,12 @@
+<a class="relative flex flex-col justify-end overflow-hidden aspect-square p-8 gap-2 group bg-black max-w-xs w-full" href="{{ url }}">
+    <span class="font-sans text-2xl font-bold text-white z-20">
+        {{ title }}
+    </span>
+    {{ if subtext }}
+    <div class="font-sans text-sm text-white z-20">
+        {{ subtext }}
+    </div>
+    {{ /if }}
+    <img class="object-cover h-full w-full inset-0 absolute group-hover:scale-105 transition-transform ease-in duration-200" src="{{ image }}" alt="">
+    <div aria-hidden="true" class="bg-black/30 z-10 absolute inset-0 h-full w-full"></div>
+</a>
