@@ -1,6 +1,6 @@
 <li class="flex flex-col md:flex-row justify-between md:justify-start px-3 py-3">
     <button
-        class="inline-flex gap-2 items-center text-black hover:text-gray-700 duration-100 ease-in transition-colors"
+        class="inline-flex gap-2 items-center text-black hover:text-gray-500 duration-100 ease-in transition-colors"
         @click.prevent="navDropdownIsOpen = (navDropdownIsOpen === '{{ dropdown_parent_title }}' ? false : '{{ dropdown_parent_title }}')"
         @keyup.escape.window="navDropdownIsOpen = false"
     >
@@ -16,7 +16,7 @@
     </button>
 
     {{# DROPDOWN #}}
-    <div class="md:absolute md:bottom-0 left-0 md:translate-y-full md:shadow-md w-full z-20 bg-white"
+    <div class="md:absolute md:bottom-0 left-0 md:translate-y-full md:shadow-md w-full z-30 bg-white"
         x-show="navDropdownIsOpen == '{{ dropdown_parent_title }}'"
         x-cloak
         x-collapse>
