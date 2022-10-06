@@ -191,6 +191,81 @@ sections:
                     instructions_position: above
                     visibility: visible
                     always_save: false
+            middle_nav_dropdown_product_cards:
+              display: 'Middle Nav Dropdown Product Cards'
+              fields:
+                -
+                  handle: dropdown_parent_title
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Dropdown Parent Title'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: featured_products
+                  field:
+                    collapse: false
+                    previews: true
+                    sets:
+                      product:
+                        display: Product
+                        fields:
+                          -
+                            handle: title
+                            field:
+                              input_type: text
+                              antlers: false
+                              display: Title
+                              type: text
+                              icon: text
+                              listable: hidden
+                              instructions_position: above
+                              visibility: visible
+                              always_save: false
+                          -
+                            handle: subtext
+                            field:
+                              restrict: false
+                              automatic_line_breaks: true
+                              automatic_links: false
+                              escape_markup: false
+                              smartypants: false
+                              antlers: false
+                              display: Subtext
+                              type: markdown
+                              icon: markdown
+                              listable: hidden
+                              instructions_position: above
+                              visibility: visible
+                              always_save: false
+                          -
+                            handle: image
+                            field:
+                              mode: list
+                              container: assets
+                              restrict: false
+                              allow_uploads: true
+                              show_filename: true
+                              max_files: 1
+                              display: Image
+                              type: assets
+                              icon: assets
+                              listable: hidden
+                              instructions_position: above
+                              visibility: visible
+                              always_save: false
+                    display: 'Featured Products'
+                    type: replicator
+                    icon: replicator
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
           display: 'Middle Nav'
           type: replicator
           icon: replicator
