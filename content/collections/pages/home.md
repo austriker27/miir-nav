@@ -1,16 +1,22 @@
 ---
-title: Home
 id: home
-template: home
 blueprint: pages
+title: Home
+template: home
+author: 08f26920-a6cf-4e12-a31a-ec1b26e734ec
+updated_by: 08f26920-a6cf-4e12-a31a-ec1b26e734ec
+updated_at: 1665081533
 ---
-## Welcome to your new brand Statamic site!
+# MiiR is doing amazing things.
 
-Not sure where to do next? Here are a few ideas, but feel free to explore in your own way, in your own time.
+### I'm [David Lindahl](https://davidalindahl.com), Front End Developer and I want to help.
 
-- [Jump into the Control Panel](/cp) and edit this page or begin setting up your own collections and blueprints.
-- [Head to the docs](https://statamic.dev) and learn how Statamic works.
-- [Watch some Statamic videos](https://youtube.com/statamic) on YouTube.
-- [Join our Discord chat](https://statamic.com/discord) and meet thousands of other Statamic developers.
-- [Start a discussion](https://github.com/statamic/cms/discussions) and get answers to your questions.
-- [Star Statamic on Github](https://github.com/statamic/cms) if you enjoy using it!
+I love crafting beautiful digital experiences and have done so for 5+ years for internal products and external clients.
+
+Web projects I've worked on in the last year or so include:
+
+- [A new from scratch website for the rebrand of Product Hunt's #1 upvoted product of 2021](https://Sprig.com)
+- [A brand new website for the biggest PHP news site](https://Laravel-News.com)
+- [The COVID Awareness website for the Ad Council which was featured in Nationally Televised Ad Campaigns](https://getvaccineanswers.org/)
+
+Also I eat, sleep, and drink Shopify (and in my sparetime run my own Shopify storefront that donates from every purchase - inspired by MiiR).

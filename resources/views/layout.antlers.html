@@ -20,37 +20,11 @@
         {{ partial:nav/main-nav }}
     </header>
 
-    <main class="bg-black flex justify-center items-center flex-1">
-        <section class="flex flex-col gap-2 font-sans text-white max-w-prose px-4 py-32">
-            <h1 class="text-3xl font-bold">
-                MiiR is doing amazing things.
-            </h1>
-            <p class="text-xl">
-                I'm David Lindahl, Front End Developer and I want to help.
-            </p>
-            <p>
-                I love crafting beautiful digital experiences and have done so for 5+ years for internal products and external clients.
-            </p>
-            <p>
-                Prior websites I've worked on include:
-            </p>
-            <div class="prose prose-ul:text-white prose-li:text-white">
-                <ul class="">
-                    <li>
-                        A new from scratch website for the rebrand of Product Hunt's #1 upvoted product of 2021 (Sprig.com)
-                    </li>
-                    <li>
-                        A brand new website for the biggest PHP news site (Laravel-News.com)
-                    </li>
-                    <li>
-                        The COVID Awareness website for the Ad Council which was featured in Nationally Televised Ad Campaigns
-                        (getvaccineanswers.org/)
-                    </li>
-                </ul>
+    <main class="bg-black w-full flex-1 mx-auto max-w-screen-xl">
+        <section class="flex justify-center items-center ">
+            <div class="flex flex-col gap-2 font-sans text-white max-w-prose px-4 py-32 prose prose-p:text-white prose-headings:text-white prose-li:text-white prose-a:text-white prose-p:mb-0 prose-p:mt-2">
+                {{ content }}
             </div>
-            <p>
-                Also I eat, sleep, and drink Shopify (and in my sparetime run my own Shopify storefront that donates from every purchase - inspired by MiiR).
-            </p>
         </section>
     </main>
 
