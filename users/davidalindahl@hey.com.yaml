@@ -2,3 +2,7 @@ name: David
 super: true
 id: 08f26920-a6cf-4e12-a31a-ec1b26e734ec
 password_hash: $2y$10$kCMgK1pgw3spvXBczTN2w.RVb5UVXJLpmGTRjn/gmE7L12TFoGlUq
+preferences:
+  assets:
+    assets:
+      mode: grid
