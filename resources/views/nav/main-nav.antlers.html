@@ -1,0 +1,82 @@
+<nav class="flex justify-between items-center py-2 px-3 relative"
+     x-data="{ navDropdownIsOpen: false }">
+    <a class=""
+       href="/"
+       aria-label="Home">
+        <img class="h-10 shrink-0"
+             src="{{ main_nav:logo }}"
+             alt="">
+    </a>
+    <div class="text-black hover:text-gray-700 duration-100 ease-in transition-colors inline-flex items-center gap-4 md:hidden">
+        <a class="md:hidden" href="https://www.miir.com/cart">
+            {{ svg src="bag" class="h-4 fill-current text-black hover:text-gray-700 transition-colors duration-200 ease-in shrink-0" }}
+            <span class="sr-only">
+                Shopping Cart
+            </span>
+        </a>
+        <button
+            type="button"
+            @click.prevent="mobileNavIsOpen = !mobileNavIsOpen"
+            @keyup.escape.window="mobileNavIsOpen = false"
+            :aria-label="mobileNavIsOpen ? 'Close Site Navigation' : 'Open Site Navigation'"
+            :aria-expanded="mobileNavIsOpen ? 'true' : 'false'"
+            aria-controls="miir-mobile-navbar"
+        >
+            {{ svg src="bars" class="h-6 w-6 fill-current" }}
+            <span class="sr-only">
+                Open Mobile Menu
+            </span>
+        </button>
+    </div>
+
+    <div
+        class="bottom-0 left-0 absolute translate-y-full bg-white z-10 w-full min-h-screen md:h-auto md:w-auto md:translate-y-0 gap-4 md:gap-0"
+        :class="mobileNavIsOpen ? 'flex flex-col' : 'hidden md:flex'"
+        id="miir-mobile-navbar"
+        x-collapse
+    >
+        <!-- MIDDLE NAV ITEMS -->
+        <ul class="flex flex-col md:flex-row gap-1">
+            {{ main_nav:middle_nav }}
+            {{ partial src="sets/{type}" }}
+            {{ /main_nav:middle_nav }}
+        </ul>
+        <!-- AUX NAV -->
+        <!-- SEARCH, USER, SHOPPING CART, QUESTION -->
+        <ul class="flex items-center gap-4 px-4 md:px-0">
+            <li>
+                <a href="https://www.miir.com/search">
+                    {{ svg src="phosphoricons/search" class="h-4 fill-current text-black hover:text-gray-700 transition-colors duration-200 ease-in shrink-0" }}
+                    <span class="sr-only">
+                        Search
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.miir.com/account/login">
+                    {{ svg src="phosphoricons/user" class="h-4 fill-current text-black hover:text-gray-700 transition-colors duration-200 ease-in shrink-0" }}
+                    <span class="sr-only">
+                        Log in
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.miir.com/cart">
+                    {{ svg src="bag" class="h-4 fill-current text-black hover:text-gray-700 transition-colors duration-200 ease-in shrink-0" }}
+                    <span class="sr-only">
+                        Shopping Cart
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.miir.com/faq">
+                    {{ svg src="question" class="h-4 fill-current text-black hover:text-gray-700 transition-colors duration-200 ease-in shrink-0" }}
+                    <span class="sr-only">
+                        Questions and FAQs
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
