@@ -1,9 +1,9 @@
-<a class="relative flex flex-col justify-end overflow-hidden aspect-square p-8 gap-2 group bg-black max-w-xs w-full" href="{{ url }}">
-    <span class="font-sans text-2xl font-bold text-white z-20">
+<a class="relative flex flex-col justify-end overflow-hidden p-4 md:p-8 gap-2 group bg-black w-full aspect-square" href="{{ url }}">
+    <span class="font-sans text-xl md:text-2xl font-bold text-white z-20">
         {{ title }}
     </span>
     {{ if subtext }}
-    <div class="font-sans text-sm text-white z-20">
+    <div class="prose prose-sm font-sans prose-p:text-white z-20">
         {{ subtext }}
     </div>
     {{ /if }}

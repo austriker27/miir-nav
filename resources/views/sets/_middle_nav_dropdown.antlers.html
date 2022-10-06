@@ -1,28 +1,28 @@
-<li class="inline-flex px-3 py-3">
+<li class="flex flex-col md:flex-row justify-between md:justify-start px-3 py-3">
     <button
-        class="inline-flex gap-2 items-center"
+        class="inline-flex gap-2 items-center text-black hover:text-gray-700 duration-100 ease-in transition-colors"
         @click.prevent="navDropdownIsOpen = (navDropdownIsOpen === '{{ dropdown_parent_title }}' ? false : '{{ dropdown_parent_title }}')"
+        @keyup.escape.window="navDropdownIsOpen = false"
     >
         <span class="font-semibold">
             {{ dropdown_parent_title }}
         </span>
         <template x-if="navDropdownIsOpen == '{{ dropdown_parent_title}}'">
-            {{ svg src="phosphoricons/caret-down" class="h-4 fill-current text-black" }}
+            {{ svg src="phosphoricons/caret-down" class="h-4 fill-current" }}
         </template>
         <template x-if="navDropdownIsOpen !== '{{ dropdown_parent_title}}'">
-            {{ svg src="phosphoricons/caret-up" class="h-4 fill-current text-black" }}
+            {{ svg src="phosphoricons/caret-up" class="h-4 fill-current" }}
         </template>
     </button>
 
     {{# DROPDOWN #}}
-    <div class="absolute bottom-0 left-0 translate-y-full shadow-md px-8 py-4 w-screen"
+    <div class="md:absolute md:bottom-0 left-0 md:translate-y-full md:shadow-md w-full z-20 bg-white"
         x-show="navDropdownIsOpen == '{{ dropdown_parent_title }}'"
         x-cloak
         x-collapse>
-        <div class="justify-center flex flex-wrap gap-2">
+        <div class="flex flex-col md:flex-row gap-2 p-2 md:p-4">
+            <ul class="flex flex-col w-full md:w-1/2">
             {{ dropdown_children }}
-            {{ if type == 'dropdown_child' or type == 'link'}}
-            <ul class="flex flex-col w-1/2">
                 {{ if type == "dropdown_child" }}
                     <li class="inline-flex w-full">
                         {{ partial src="sets/dropdown_child" }}
@@ -34,13 +34,12 @@
                         </a>
                     </li>
                 {{ /if }}
-            </ul>
-            {{ /if }}
             {{ /dropdown_children }}
+            </ul>
 
             {{ dropdown_children }}
             {{ if type == "featured_product" }}
-                <ul class="w-1/2">
+                <ul class="w-full md:w-1/2">
                     <li>
                         {{ partial:product_card }}
                     </li>
