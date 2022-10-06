@@ -43,11 +43,12 @@ return [
         public_path('js') => 'js',
         public_path('assets') => 'assets',
         public_path('svg') => 'svg',
+        public_path('fonts') => 'fonts',
     ],
 
     'symlinks' => [
-        public_path('css') => 'css',
-        public_path('js') => 'js',
+        // public_path('css') => 'css',
+        // public_path('js') => 'js',
     ],
 
     /*
